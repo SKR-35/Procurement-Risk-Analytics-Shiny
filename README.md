@@ -33,7 +33,7 @@ Atlas Przetargów. (2026). *Polish Public Tenders Dataset (BZP + TED)* (Version 
 
 ## Project Goals
 
-The objective is not to determine wrongdoing.
+The framework analyzes more than 367,000 procurement notices and approximately 188,000 buyer-vendor relationships. The objective is not to determine wrongdoing.
 
 Instead, the framework aims to:
 
