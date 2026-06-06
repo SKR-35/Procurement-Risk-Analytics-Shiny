@@ -19,6 +19,14 @@ The data remains the property of its original providers and is used here for edu
 
 ---
 
+## Citation
+
+This project uses procurement data provided by Atlas Przetargów.
+
+Citation:
+
+Atlas Przetargów. (2026). *Polish Public Tenders Dataset (BZP + TED)* (Version 2026.Q2) [Data set]. https://doi.org/10.5281/zenodo.19634050
+
 ## Project Goals
 
 The objective is not to determine wrongdoing.
