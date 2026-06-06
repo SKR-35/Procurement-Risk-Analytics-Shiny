@@ -6,8 +6,8 @@
 *.Rproj
 
 # Data and outputs
-data/
-outputs/
+data/*
+outputs/*
 
 !data/.gitkeep
 !outputs/.gitkeep
