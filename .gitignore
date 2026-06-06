@@ -1,0 +1,46 @@
+# R
+.Rhistory
+.RData
+.Ruserdata
+
+# RStudio
+.Rproj.user/
+
+# Data and outputs
+data/
+outputs/
+
+# Temporary files
+*.tmp
+*.temp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Cache
+cache/
+tmp/
+
+# Quarto / RMarkdown
+*_cache/
+*_files/
+
+# Shiny deployment
+rsconnect/
+
+# Large local exports
+*.csv
+*.xlsx
+*.parquet
+*.rds
+
+# VS Code
+.vscode/
+
+# Environment files
+.env
+.env.*
