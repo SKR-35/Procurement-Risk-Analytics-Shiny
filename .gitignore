@@ -1,10 +1,9 @@
-# R
+# R & RStudio
 .Rhistory
 .RData
 .Ruserdata
-
-# RStudio
 .Rproj.user/
+*.Rproj
 
 # Data and outputs
 data/

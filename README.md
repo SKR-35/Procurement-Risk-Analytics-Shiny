@@ -277,4 +277,4 @@ Users should obtain the source data directly from Atlas Przetargów:
 - https://atlasprzetargow.pl/
 - https://github.com/atlasprzetargow
 
-Please refer to the original data provider for licensing terms, updates, and usage conditions.
+Please refer to the original data provider for licensing terms, updates and usage conditions.
