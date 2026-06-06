@@ -1,3 +1,7 @@
+![R](https://img.shields.io/badge/R-4.6+-blue)
+![Shiny](https://img.shields.io/badge/Shiny-Dashboard-green)
+![License](https://img.shields.io/badge/License-Apache%202.0-orange)
+
 # Procurement Risk Analytics (Polish Public Procurement Data)
 
 An end-to-end procurement risk analytics framework built in R and Shiny using publicly available Polish procurement data.
@@ -263,3 +267,14 @@ This project is intended for educational, analytical and risk-screening purposes
 Risk scores, anomaly indicators, concentration metrics and Benford deviations do not constitute evidence of misconduct.
 
 All outputs should be treated as review signals requiring further investigation and professional judgment.
+
+## Dataset Availability
+
+This repository does not redistribute the original procurement dataset.
+
+Users should obtain the source data directly from Atlas Przetargów:
+
+- https://atlasprzetargow.pl/
+- https://github.com/atlasprzetargow
+
+Please refer to the original data provider for licensing terms, updates, and usage conditions.
