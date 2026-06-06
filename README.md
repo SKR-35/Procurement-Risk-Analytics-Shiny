@@ -181,43 +181,54 @@ The Shiny application provides:
 
 ---
 
-## Project Structure
+# Project Architecture
 
+```text
 Procurement-Risk-Analytics-Shiny/
-
+│
 ├── app.R
-
 ├── README.md
-
+├── LICENSE
 ├── Procurement-Risk-Analytics-Shiny.Rproj
-
 │
-
 ├── data/
-
-├── outputs/
-
+│   ├── raw/
+│   ├── processed/
+│   └── reference/
 │
-
+├── outputs/
+│   ├── reports/
+│   ├── figures/
+│   └── exports/
+│
 └── R/
+    ├── 01_load_data.R
+    ├── 02_clean_prepare.R
+    ├── 03_benford_analysis.R
+    ├── 04_risk_rules.R
+    ├── 05_vendor_scoring.R
+    ├── 06_buyer_scoring.R
+    ├── 07_relationship_analysis.R
+    ├── 08_concentration_analysis.R
+    └── 09_plots.R
+```
 
-├── 01_load_data.R
+### Script Overview
 
-├── 02_clean_prepare.R
+| Script                      | Purpose                                     |
+| --------------------------- | ------------------------------------------- |
+| 01_load_data.R              | Data ingestion and validation               |
+| 02_clean_prepare.R          | Data preparation and enrichment             |
+| 03_benford_analysis.R       | Benford Law anomaly detection               |
+| 04_risk_rules.R             | Risk indicator construction                 |
+| 05_vendor_scoring.R         | Vendor risk scorecard generation            |
+| 06_buyer_scoring.R          | Buyer risk scorecard generation             |
+| 07_relationship_analysis.R  | Buyer–vendor network analytics              |
+| 08_concentration_analysis.R | Concentration and dependency metrics        |
+| 09_plots.R                  | Plotly visualizations and dashboard helpers |
 
-├── 03_benford_analysis.R
-
-├── 04_risk_rules.R
-
-├── 05_vendor_scoring.R
-
-├── 06_buyer_scoring.R
-
-├── 07_relationship_analysis.R
-
-├── 08_concentration_analysis.R
-
-└── 09_plots.R
+```
+```
 
 ---
 
