@@ -271,3 +271,44 @@ plot_relationship_value_vs_count <- function(relationship_analysis) {
       yaxis = list(title = "log10(Relationship value + 1)")
     )
 }
+
+plot_top_dominant_relationships <- function(concentration_analysis, n = 15, min_contracts = 2) {
+  df <- concentration_analysis$dominant_relationships |>
+    dplyr::filter(
+      relationship_contracts >= min_contracts,
+      !is.na(mutual_dependency_score)
+    ) |>
+    dplyr::slice_max(mutual_dependency_score, n = n, with_ties = FALSE) |>
+    dplyr::mutate(
+      label = paste0(
+        stringr::str_trunc(buyer_nip_clean, 12),
+        " → ",
+        stringr::str_trunc(contractor_id_clean, 12)
+      )
+    )
+
+  plotly::plot_ly(
+    df,
+    x = ~mutual_dependency_score,
+    y = ~stats::reorder(label, mutual_dependency_score),
+    type = "bar",
+    orientation = "h",
+    text = ~paste0(
+      "Buyer: ", buyer_nip_clean,
+      "<br>Vendor: ", contractor_id_clean,
+      "<br>Contracts: ", relationship_contracts,
+      "<br>Value: ", round(relationship_value, 0),
+      "<br>Buyer value share: ", round(buyer_value_share, 3),
+      "<br>Vendor value share: ", round(vendor_value_share, 3),
+      "<br>Score: ", mutual_dependency_score,
+      "<br>Band: ", mutual_dependency_band
+    ),
+    hoverinfo = "text"
+  ) |>
+    plotly::layout(
+      title = paste0("Top Dominant Buyer-Vendor Relationships (min ", min_contracts, " contracts)"),
+      xaxis = list(title = "Mutual dependency score"),
+      yaxis = list(title = ""),
+      margin = list(l = 180)
+    )
+}
