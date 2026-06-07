@@ -187,20 +187,16 @@ The Shiny application provides:
 Procurement-Risk-Analytics-Shiny/
 │
 ├── app.R
+├── deploy_shinyapps.R
+├── walkthrough.R
 ├── README.md
 ├── LICENSE
 ├── Procurement-Risk-Analytics-Shiny.Rproj
 │
 ├── data/
-│   ├── raw/
-│   ├── processed/
-│   └── reference/
 │
 ├── outputs/
-│   ├── reports/
-│   ├── figures/
-│   └── exports/
-│
+│   
 └── R/
     ├── 01_load_data.R
     ├── 02_clean_prepare.R
