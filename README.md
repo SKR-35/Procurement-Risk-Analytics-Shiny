@@ -2,11 +2,17 @@
 ![Shiny](https://img.shields.io/badge/Shiny-Dashboard-green)
 ![License](https://img.shields.io/badge/License-Apache%202.0-orange)
 
+**Live dashboard:** https://skr-35.shinyapps.io/procurement-risk-analytics-dashboard/
+
 # Procurement Risk Analytics (Polish Public Procurement Data)
 
 An end-to-end procurement risk analytics framework built in R and Shiny using publicly available Polish procurement data.
 
 The project combines statistical anomaly detection, buyer and vendor risk scoring, relationship analysis, competition indicators and interactive dashboards to identify procurement patterns that may warrant additional review.
+
+![Dashboard overview](outputs/Dashboard_ui.png)
+
+![Voivodeship risk map](outputs/Dashboard_ui2.png)
 
 ---
 
@@ -21,6 +27,10 @@ Data source:
 
 The data remains the property of its original providers and is used here for educational, analytical and research purposes.
 
+Geographic voivodeship boundaries used in the map view are based on the open GeoJSON files from:
+
+* https://github.com/andilabs/polska-wojewodztwa-geojson
+
 ---
 
 ## Citation
@@ -33,9 +43,9 @@ Atlas Przetargów. (2026). *Polish Public Tenders Dataset (BZP + TED)* (Version 
 
 ## Project Goals
 
-The framework analyzes more than 367,000 procurement notices and approximately 188,000 buyer-vendor relationships. The objective is not to determine wrongdoing.
+The raw Atlas Przetargów dataset contains more than 1.4 million procurement notice records. These records cover the full notice lifecycle. For risk analytics, this project focuses on result and award notices, which represent concluded procurement outcomes. After this analytical filtering step, the dashboard review universe contains 367,287 result notices and 188,788 aggregated buyer-vendor relationships.
 
-Instead, the framework aims to:
+The objective is not to determine wrongdoing. Instead, the framework aims to:
 
 * Identify statistical anomalies
 * Prioritize procurement entities for review
@@ -178,6 +188,7 @@ The Shiny application provides:
 * Benford visualizations
 * Procurement concentration metrics
 * Interactive Plotly charts
+* Dockerized local deployment
 
 ---
 
@@ -192,10 +203,13 @@ Procurement-Risk-Analytics-Shiny/
 ├── README.md
 ├── LICENSE
 ├── Procurement-Risk-Analytics-Shiny.Rproj
+├── Dockerfile
+├── .dockerignore
 │
 ├── data/
 │
 ├── outputs/
+│	└── map_cache
 │   
 └── R/
     ├── 01_load_data.R
