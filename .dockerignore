@@ -1,0 +1,11 @@
+.git
+.Rproj.user
+.RData
+.Rhistory
+data/
+outputs/*.pdf
+outputs/*.png
+outputs/map_cache/
+*.Rproj
+walkthrough.R
+deploy_shinyapps.R
