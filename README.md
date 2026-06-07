@@ -251,7 +251,7 @@ source("R/09_plots.R")
 Run the dashboard:
 
 ```r
-shiny::runApp()
+shiny::runApp(launch.browser = TRUE)
 ```
 
 ---
