@@ -236,6 +236,8 @@ Procurement-Risk-Analytics-Shiny/
 | 07_relationship_analysis.R  | Buyer–vendor network analytics              |
 | 08_concentration_analysis.R | Concentration and dependency metrics        |
 | 09_plots.R                  | Plotly visualizations and dashboard helpers |
+| walkthrough.R | Step-by-step project walkthrough for reproducing the full pipeline |
+| deploy_shinyapps.R | shinyapps.io deployment script |
 
 ```
 ```
@@ -256,6 +258,12 @@ source("R/06_buyer_scoring.R")
 source("R/07_relationship_analysis.R")
 source("R/08_concentration_analysis.R")
 source("R/09_plots.R")
+```
+
+The walkthrough script runs the project step by step from raw parquet inputs to processed RDS outputs and dashboard-ready analytics objects. For a guided end-to-end run, use:
+
+```r
+source("walkthrough.R")
 ```
 
 Run the dashboard:
