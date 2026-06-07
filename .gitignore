@@ -47,3 +47,7 @@ rsconnect/
 # Environment files
 .env
 .env.*
+
+# Dashboard images
+!outputs/Dashboard_ui.png
+!outputs/Dashboard_ui2.png
