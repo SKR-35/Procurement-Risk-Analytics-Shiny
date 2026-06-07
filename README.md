@@ -239,9 +239,6 @@ Procurement-Risk-Analytics-Shiny/
 | walkthrough.R | Step-by-step project walkthrough for reproducing the full pipeline |
 | deploy_shinyapps.R | shinyapps.io deployment script |
 
-```
-```
-
 ---
 
 ## Running the Project
@@ -270,6 +267,36 @@ Run the dashboard:
 
 ```r
 shiny::runApp(launch.browser = TRUE)
+```
+
+Deploy the dashboard:
+
+```r
+source("deploy_shinyapps.R")
+```
+
+---
+
+### Run with Docker
+
+The dashboard can also be run inside a Docker container.
+
+Build the image from the project root:
+
+```bash
+docker build -t procurement-risk-analytics-shiny .
+```
+
+Run the container:
+
+```bash
+docker run --rm -p 3838:3838 procurement-risk-analytics-shiny
+```
+
+Then open:
+
+```
+http://localhost:3838
 ```
 
 ---
