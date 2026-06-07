@@ -1,6 +1,7 @@
 # R & RStudio
 .Rhistory
 .RData
+.RDataTmp
 .Ruserdata
 .Rproj.user/
 *.Rproj
